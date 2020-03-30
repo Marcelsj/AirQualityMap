@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quick Start - Leaflet</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+</head>
+<body>
+    <div id="mapid" style="width: 800px; height: 600px;"></div>
+<script>
+
+	var mapa = L.map('mapid').setView([41.380600, 2.029638], 10);
+
+	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 18,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox/streets-v11',
+		tileSize: 512,
+		zoomOffset: -1
+	}).addTo(mapa);
+
+var marker1 = L.marker([41.385315,2.1537998]).addTo(mapa);
+marker1.bindPopup("<b>Eixample<b><br><img src='plots2/Eixample_NO2_95.png' alt='NO2 Eixample' width='540' height='252'>",{maxWidth:600, height:310});
+var marker2 = L.marker([41.386406,2.1873982]).addTo(mapa);
+marker2.bindPopup("<b>Ciutadella<b><br><img src='plots2/Ciutadella_NO2_95.png' alt='NO2 Ciutadella' width='540' height='252'>",{maxWidth:600, height:310});
+var marker3 = L.marker([41.39872171,2.153398848]).addTo(mapa);
+marker3.bindPopup("<b>Gracia <b><br><img src='plots2/Gracia_NO2_95.png' alt='NO2 Gracia' width='540' height='252'>",{maxWidth:600, height:310});
+var marker4 = L.marker([41.40388,2.204501]).addTo(mapa);
+marker4.bindPopup("<b>Poblenou<b><br><img src='plots2/Poblenou_NO2_95.png' alt='NO2 Poblenou' width='540' height='252'>",{maxWidth:600, height:310});
+var marker5 = L.marker([41.37878,2.133099]).addTo(mapa);
+marker5.bindPopup("<b>Sants<b><br><img src='plots2/Sants_NO2_95.png' alt='NO2 Sants' width='540' height='252'>",{maxWidth:600, height:310});
+var marker6 = L.marker([41.42611,2.1480017]).addTo(mapa);
+marker6.bindPopup("<b>Vall Hebron<b><br><img src='plots2/VallHebron_NO2_95.png' alt='NO2 VallHebron' width='540' height='252'>",{maxWidth:600, height:310});
+var marker7 = L.marker([41.38749,2.1151996]).addTo(mapa);
+marker7.bindPopup("<b>Palau Reial<b><br><img src='plots2/PalauReial_NO2_95.png' alt='NO2 PalauReial' width='540' height='252'>",{maxWidth:600, height:310});
+var marker8 = L.marker([41.41843,2.1238973]).addTo(mapa);
+marker8.bindPopup("<b>Observatori Fabra<b><br><img src='plots2/ObsFabra_NO2_95.png' alt='NO2 ObsFabra' width='540' height='252'>",{maxWidth:600, height:310});
+var marker9 = L.marker([41.321487,2.0977015]).addTo(mapa);
+marker9.bindPopup("<b>Prat-Jardins de la Pau<b><br><img src='plots2/PratJardins_NO2_95.png' alt='NO2 PratJardins' width='540' height='252'>",{maxWidth:600, height:310});
+var marker10 = L.marker([41.321774,2.0821]).addTo(mapa);
+marker10.bindPopup("<b>Prat-CEM Sagnier<b><br><img src='plots2/PratSagnier_NO2_95.png' alt='NO2 PratSagnier' width='540' height='252'>",{maxWidth:600, height:310});
+var marker11 = L.marker([41.370476,2.1149993]).addTo(mapa);
+marker11.bindPopup("<b>Hospitalet<b><br><img src='plots2/Hospitalet_NO2_95.png' alt='NO2 Hospitalet' width='540' height='252'>",{maxWidth:600, height:310});
+var marker12 = L.marker([41.31335,2.0136087]).addTo(mapa);
+marker12.bindPopup("<b>Viladecans<b><br><img src='plots2/Viladecans_NO2_95.png' alt='NO2 Viladecans' width='540' height='252'>",{maxWidth:600, height:310});
+var marker13 = L.marker([41.476814,2.0889983]).addTo(mapa);
+marker13.bindPopup("<b>Sant Cugat Vallès<b><br><img src='plots2/SantCugat_NO2_95.png' alt='NO2 SantCugat' width='540' height='252'>",{maxWidth:600, height:310});
+var marker14 = L.marker([41.447422,2.209497]).addTo(mapa);
+marker14.bindPopup("<b>Santa Coloma de Gramanet<b><br><img src='plots2/SantaColoma_NO2_95.png' alt='NO2 SantaColoma' width='540' height='252'>",{maxWidth:600, height:310});
+var marker15 = L.marker([41.443985,2.2378986]).addTo(mapa);
+marker15.bindPopup("<b>Badalona<b><br><img src='plots2/Badalona_NO2_95.png' alt='NO2 Badalona' width='540' height='252'>",{maxWidth:600, height:310});
+var marker16 = L.marker([41.303097,1.9914981]).addTo(mapa);
+marker16.bindPopup("<b>Gavà<b><br><img src='plots2/Gava_NO2_95.png' alt='NO2 Gava' width='540' height='252'>",{maxWidth:600, height:310});
+var marker17 = L.marker([41.425594,2.2221997]).addTo(mapa);
+marker17.bindPopup("<b>Sant Adrià de Besòs<b><br><img src='plots2/SantAdria_NO2_95.png' alt='NO2 SantAdria' width='540' height='252'>",{maxWidth:600, height:310});
+var marker18 = L.marker([41.48197,2.1882975]).addTo(mapa);
+marker18.bindPopup("<b>Montcada i Reixac<b><br><img src='plots2/Montcada_NO2_95.png' alt='NO2 Montcada' width='540' height='252'>",{maxWidth:600, height:310});
+var marker19 = L.marker([41.512684,2.1253984]).addTo(mapa);
+marker19.bindPopup("<b>Barberà del Vallès<b><br><img src='plots2/Barbera_NO2_95.png' alt='NO2 Barbera' width='540' height='252'>",{maxWidth:600, height:310});
+var marker20 = L.marker([41.4508,1.9748996]).addTo(mapa);
+marker20.bindPopup("<b>Sant Andreu de la Barca<b><br><img src='plots2/SantAndreu_NO2_95.png' alt='NO2 SantAndreu' width='540' height='252'>",{maxWidth:600, height:310});
+var marker21 = L.marker([41.41528,1.9905012]).addTo(mapa);
+marker21.bindPopup("<b>Pallejà<b><br><img src='plots2/Palleja_NO2_95.png' alt='NO2 Palleja' width='540' height='252'>",{maxWidth:600, height:310});
+
+</script>
+
+
+
+</body>
+</html>
